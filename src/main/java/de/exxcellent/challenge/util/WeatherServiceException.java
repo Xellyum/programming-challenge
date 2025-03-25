@@ -1,4 +1,4 @@
-package de.exxcellent.challenge.service;
+package de.exxcellent.challenge.util;
 
 public class WeatherServiceException extends RuntimeException {
 

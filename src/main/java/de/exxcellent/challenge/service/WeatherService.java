@@ -1,6 +1,7 @@
 package de.exxcellent.challenge.service;
 
 import de.exxcellent.challenge.model.WeatherData;
+import de.exxcellent.challenge.util.WeatherServiceException;
 import de.exxcellent.challenge.util.parser.CsvFileParser;
 import de.exxcellent.challenge.util.parser.FileParser;
 
