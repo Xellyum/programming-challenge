@@ -1,6 +1,7 @@
 package de.exxcellent.challenge.service;
 
 import de.exxcellent.challenge.model.FootballData;
+import de.exxcellent.challenge.util.FootballServiceException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
