@@ -1,5 +1,6 @@
 package de.exxcellent.challenge;
 
+import de.exxcellent.challenge.service.FootballService;
 import de.exxcellent.challenge.service.WeatherService;
 
 /**
@@ -11,6 +12,7 @@ import de.exxcellent.challenge.service.WeatherService;
 public final class App {
 
     private static final String WEATHER_DATA_FILE_PATH = "src/main/resources/de/exxcellent/challenge/weather.csv";
+    private static final String FOOTBALL_DATA_FILE_PATH = "src/main/resources/de/exxcellent/challenge/football.csv";
 
     /**
      * This is the main entry method of your program.
@@ -19,11 +21,12 @@ public final class App {
     public static void main(String... args) {
         // Your preparation code …
         var weatherService = new WeatherService();
+        var footballService = new FootballService();
 
-        var dayWithSmallestTempSpread = weatherService.determineSmallestTemperatureSpreadDay(WEATHER_DATA_FILE_PATH);     // Your day analysis function call …
+        var dayWithSmallestTempSpread = weatherService.determineSmallestTemperatureSpreadDay(WEATHER_DATA_FILE_PATH); // Your day analysis function call …
         System.out.printf("Day with smallest temperature spread : %s%n", dayWithSmallestTempSpread);
 
-        String teamWithSmallestGoalSpread = "A good team"; // Your goal analysis function call …
+        String teamWithSmallestGoalSpread = footballService.determineTeamWithSmallestGoalDifference(FOOTBALL_DATA_FILE_PATH); // Your goal analysis function call …
         System.out.printf("Team with smallest goal spread       : %s%n", teamWithSmallestGoalSpread);
     }
 }
